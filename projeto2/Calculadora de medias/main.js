@@ -43,7 +43,7 @@ function CalculaMedia(){
 function EscreveMedia(media = 0){
     let linha = `<tr>`;
     linha += `<td>Média final</td>`;
-    linha += `<td>${media}</td>`;
+    linha += `<td>${media.toFixed(2)}</td>`;
     linha += `<td> <span class= "resultado">${media >= notaMinima ? 'Aprovado': 'Reprovado'}</span></td>`;
     linha += `</tr>`;
     tfoot.innerHTML = linha;
