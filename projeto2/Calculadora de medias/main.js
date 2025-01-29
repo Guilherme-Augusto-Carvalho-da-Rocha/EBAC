@@ -3,6 +3,7 @@ const notaAtv = document.getElementById('notaAtv');
 const form = document.getElementById('form');
 const tbody = document.querySelector('tbody');
 const tfoot = document.querySelector('tfoot');
+const notaMinima = parseFloat(prompt('digite a média minima nescessária para a aprovação:'));
 
 const imgAprovado = '<img src="./style/images/aprovado.png" alt="emoji festejando">'
 const imgReprovado = '<img src="./style/images/reprovado.png" alt="emoji triste">'
@@ -16,7 +17,7 @@ function AdicionarAtividade(){
     let linha = `<tr>`;
     linha += `<td> ${nomeAtv.value}</td>`;
     linha += `<td> ${notaAtv.value}</td>`;
-    linha += `<td> ${notaAtv.value >= 7 ? imgAprovado : imgReprovado} </td>`
+    linha += `<td> ${notaAtv.value >= notaMinima ? imgAprovado : imgReprovado} </td>`
     linha += `</tr>`;
     if(atividades.includes(nomeAtv.value)){
         alert('esta atividade já foi inserida');
@@ -43,7 +44,7 @@ function EscreveMedia(media = 0){
     let linha = `<tr>`;
     linha += `<td>Média final</td>`;
     linha += `<td>${media}</td>`;
-    linha += `<td> <span class= "resultado">${media >= 7 ? 'Aprovado': 'Reprovado'}</span></td>`;
+    linha += `<td> <span class= "resultado">${media >= notaMinima ? 'Aprovado': 'Reprovado'}</span></td>`;
     linha += `</tr>`;
     tfoot.innerHTML = linha;
 }
@@ -51,7 +52,7 @@ function EscreveMedia(media = 0){
 function EstilizaAprovadoReprovado(){
     let tfAprovado = document.querySelector('.resultado');
     let media = CalculaMedia();
-    if(media >= 7){
+    if(media >= notaMinima){
         tfAprovado.classList.add('aprovado');
     } else {
         tfAprovado.classList.add('reprovado');
