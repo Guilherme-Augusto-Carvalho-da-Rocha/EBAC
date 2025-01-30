@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    display: flex;
+    color: #FFF;
+    background-color: #5f27cd;
+    border-bottom: 16px solid #491ea0;
+    justify-content: center;
+    padding: 16px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button{
+    margin-left: 20px;
+}
+
+form{
+    background-color: #c8d6e5;
+    padding: 24px;
+    text-align: center;
+}
+
+form h2{
+    margin-bottom: 16px;
+}
+
+form input,
+form button,
+header button{
+    padding: 8px;
+}
+
+button{
+    background-color: green;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFF;
+    cursor: pointer;
+}
+
+#reset {
+    background-color: red;
+}
+
+ul li img{
+    width: 100%;
+    border: 1px solid white;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    max-width: 25%;
+    max-height: 280px;
+    list-style: none;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.imgReal{
+    padding: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.712);
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.imgReal a{
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul li:hover .imgReal{
+    opacity: 1;
+}
