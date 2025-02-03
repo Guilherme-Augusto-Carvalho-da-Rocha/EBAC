@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    background-color: #192a56;
+    padding: 16px 0;
+    color: #fff;
+}
+
+header > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+nav {
+    display: none;
+    background-color: #575fcf;
+    padding: 16px 0;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menuHamburguer{
+    cursor: pointer;
+    width: 32px;
+}
+
+.menuHamburguer span{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.flex{
+    display: flex;
+}
+
+section{
+    padding: 48px 0;
+}
+
+section h2{
+    margin-bottom: 16px;
+}
+
+#sobreALoja img{
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+.listaVeiculos{
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.listaVeiculos li{
+    list-style: none;
+    max-width: 30%;
+}
+
+.listaVeiculos li img{
+    max-width: 100%;
+}
+
+ button{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #192a56;
+    padding: 12px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.listaVeiculos p,
+.price{
+    margin-bottom: 8px;
+}
+
+.listaVeiculos li h3{
+    margin: 16px 0;
+}
+
+.price{
+    gap: 2%;
+    display: flex;
+}
+
+.price del{
+    color: grey;
+    font-size: 14px;
+}
+
+form{
+    width: 360px;
+}
+
+
+.campoForm{
+    border: none;
+    margin-bottom: 8px;
+}
+
+
+form label{
+    font-weight: bold;
+    display: block;
+}
+
+.campoForm input,
+.campoForm textarea{
+    padding: 8px;
+    width: 100%;
+    display: block;
+    
+}
+
+textarea{
+    height: 120px;
+    resize: none;
+}
+
+
+
+footer p{
+    text-align: center;
+    color: #fff;
+}
+
+footer ul{
+    justify-content: center;
+    gap: 10%;
+    display: flex;
+}
+
+footer li{
+    margin-bottom: 10px;
+    list-style: none;
+}
