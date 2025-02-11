@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <title>teste navbar</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Título do Site</h1>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="navMenu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#produtos">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#promocoes">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button type="button" id="checarEmails" class="btn btn-warning">Checar caixa de mensagens</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+            <section id="inicio">
+                <h2>Inicio</h2>
+            </section>
+            <section id="produtos">
+                <h2>Produtos</h2>
+                <nav class="nav nav-tabs">
+                    <button data-bs-toggle="tab" data-bs-target="#tabProdutoAcessorio" class="nav-link active" type="button">Acessórios</button>
+                    <button data-bs-toggle="tab" data-bs-target="#tabProdutoModaFeminina" class="nav-link" type="button">Moda Feminina</button>
+                    <button data-bs-toggle="tab" data-bs-target="#tabProdutoModaMasculina" class="nav-link" type="button">Moda Masculina</button>
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tabProdutoAcessorio">
+                        Conteúdo da aba de acessórios
+                    </div>
+                    <div class="tab-pane" id="tabProdutoModaFeminina">
+                        Conteúdo da aba de Moda Feminina
+                    </div>
+                    <div class="tab-pane" id="tabProdutoModaMasculina">
+                        Conteúdo da aba de Moda Masculina
+                    </div>
+                </div>
+            </section>
+            <section id="promocoes">
+                <h2>promoções</h2>
+            </section>
+            <section id="contato">
+                <h2>Contato</h2>
+            </section>
+        </div>
+        <div class="toast-container position-fixed bottom-0 end-0">
+            <div data-bs-autohide="false" class="toast" id="mensagensAlerta">
+                <header class="toast-header d-flex justify-content-between" data-bs-dismiss="toast">
+                    <strong>Importante:</strong>
+                    <button class="btn btn-close"></button>
+                </header>
+                <div class="toast-body">
+                    Você possui 10 mensagens não lidas!!!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../lib/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
