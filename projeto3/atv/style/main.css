@@ -1,0 +1,54 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #b49463;
+}
+
+header img{
+    max-height: 10vh;
+    height: 100%;
+}
+
+#cabecalho .nav .nav-link.active,
+#cabecalho .nav .nav-link.active:hover{
+    background-color: #FFF;
+    color: #b49463;
+}
+
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover,
+#cabecalho .nav .nav-link:hover{
+    color: #FFF;
+}
+
+.nav .nav-link.active,
+.nav .nav-link.active:hover,
+.buttonContato{
+    background-color: #b49463;
+    color: #FFF;
+}
+
+.nav .nav-link,
+.nav .nav-link:hover{
+    color: #b49463;
+}
+
+.smoothBG{
+    background-color: #b4946338;
+}
+
+.socialLinks li{
+    list-style: none;
+    display: inline;
+}
+
+.socialLinks li a{
+    text-decoration: none;
+}
+
+.coloredText{
+    color: #b49463;
+}
