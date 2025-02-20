@@ -1,0 +1,93 @@
+@use 'config/reset';
+@use 'config/variables';
+@use 'sass:math';
+
+@mixin elementoForm($margin: 2vh){
+    padding: 8px;
+    display: block;
+    width: 100%;
+    margin-bottom: $margin;
+}
+
+@function pixelParaEm($alvoEmPixels, $contextoEmPixels: 16px){
+    @return math.div($alvoEmPixels, $contextoEmPixels)+em;
+}
+
+
+body{
+    background-color: variables.$corDeFundo;
+}
+
+.container{
+    max-width: pixelParaEm(1024px, );
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    padding: 16px 0;
+    background-color: variables.$corPrincipal;
+    text-align: center;
+    color: #FFF;
+}
+
+.formContainer{
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80vw;
+
+    h2{
+        font-size: pixelParaEm(48px, );
+        text-align: center;
+    }
+
+    label{
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    form{
+        max-width: 50vw;
+        width: 100%;
+        margin-top: 5vh;
+        input{
+            @include elementoForm(3vh);
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        button{
+            @include elementoForm();
+            background-color: variables.$corSecundaria;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #FFF;
+            &:hover{
+                background-color: darken(variables.$corSecundaria, 5%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: variables.$mobile){
+    .container{
+        max-width: 80vw;
+    }
+
+    .formContainer{
+
+        h2{
+            font-size: 2em;
+        }
+
+        form{
+            max-width: 100%;
+        }    
+    }
+    
+}

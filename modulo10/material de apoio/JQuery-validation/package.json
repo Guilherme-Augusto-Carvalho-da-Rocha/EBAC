@@ -59,5 +59,8 @@
 		"forms",
 		"validation",
 		"validate"
-	]
+	],
+	"dependencies": {
+		"jquery-validation": "file:"
+	}
 }

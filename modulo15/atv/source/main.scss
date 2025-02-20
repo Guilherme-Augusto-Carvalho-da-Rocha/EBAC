@@ -1,0 +1,102 @@
+@use 'config/reset';
+@use 'config/variables';
+@use 'sass:math';
+
+
+@mixin lista(){
+    list-style: none;
+}
+
+@mixin link(){
+    text-decoration: none;
+}
+
+@function pixelParaEm($alvoEmPixels, $contextoEmPixels: 16px){
+    @return math.div($alvoEmPixels, $contextoEmPixels)+em;
+}
+
+.container {
+    max-width: pixelParaEm(1024px, );
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: variables.$corHeader;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: pixelParaEm(16px, ) 0;
+        .menu{
+            display: flex;
+        
+            li{
+                font-weight: bold;
+                margin-left: pixelParaEm(24px, );
+                @include lista();
+                a{
+                    color: #fff;
+                    @include link();
+                }
+            }
+        }
+    }
+}
+
+section {
+    padding: pixelParaEm(56px, ) 0;
+    .products {
+        margin-top: pixelParaEm(40px, );
+        display: grid;
+        grid-template-columns: repeat(3, 32.66%);
+        column-gap: 1%;
+        row-gap: 4%;
+        width: 100%;
+        .product-item{
+            @include lista();
+            img{
+                width: 100%;
+                border-radius: 16px;
+            }
+            .product-button {
+                display: block;
+                background-color: #44bd32;
+                color: #fff;
+                text-align: center;
+                padding: pixelParaEm(8px, ) 0;
+                border-radius: pixelParaEm(8px, );
+                margin-top: pixelParaEm(8px, );
+                @include link();
+                &:hover{
+                    background-color: #4cd137;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .products {
+        display: block;
+        .product-item  {
+            margin-bottom: pixelParaEm(32px, );
+        }
+    }
+
+    
+}
