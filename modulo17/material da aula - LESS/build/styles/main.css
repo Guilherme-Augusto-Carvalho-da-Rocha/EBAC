@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.marginBotton8px {
+  margin-bottom: 0.5em;
+}
+.btn-link {
+  width: 100%;
+  padding: 1em;
+  background-color: #1395ff;
+  color: #f5f6fa;
+  text-decoration: none;
+  border-radius: 1.8em;
+  transition: all ease 0.3s;
+  border: 0.15em solid #1395ff;
+}
+.btn-link:hover {
+  background-color: transparent;
+  color: #1395ff;
+}
+@media (max-width: 767px) {
+  .btn-link {
+    padding: 0.5em;
+  }
+}
+body {
+  background-color: #035bb9;
+  color: #f5f6fa;
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 70vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 80vw;
+  }
+}
+header {
+  padding: 1.5em;
+}
+header .profile-picture {
+  display: block;
+  margin: 0 auto 1.5em;
+  border-radius: 50%;
+  max-width: 12.5vw;
+}
+@media (max-width: 767px) {
+  header .profile-picture {
+    max-width: 35vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  header .profile-picture {
+    max-width: 40vw;
+  }
+}
+nav {
+  margin-top: 2em;
+}
+nav h3 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.profile-bio {
+  text-align: center;
+}
+.profile-bio-name {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+.profile-bio-subtitle {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.profile-bio-description {
+  font-size: 1em;
+  opacity: 0.7;
+}
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.social-links li {
+  list-style: none;
+}
+.social-links li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1em;
+  background-color: #1395ff;
+  color: #f5f6fa;
+  text-decoration: none;
+  border-radius: 1.8em;
+  transition: all ease 0.3s;
+  border: 0.15em solid #1395ff;
+}
+.social-links li a:hover {
+  background-color: transparent;
+  color: #1395ff;
+}
+@media (max-width: 767px) {
+  .social-links li a {
+    padding: 0.5em;
+  }
+}
+.social-links li a img {
+  margin-right: 1em;
+}
+@media (max-width: 767px) {
+  .social-links {
+    display: block;
+  }
+  .social-links a {
+    width: 100%;
+    margin-top: 0.5em;
+  }
+}
+.projects-list-item {
+  text-align: center;
+  list-style: none;
+}
+.projects-list-item a {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  background-color: #1395ff;
+  color: #f5f6fa;
+  text-decoration: none;
+  border-radius: 1.8em;
+  transition: all ease 0.3s;
+  border: 0.15em solid #1395ff;
+  margin-top: 0.5em;
+}
+.projects-list-item a:hover {
+  background-color: transparent;
+  color: #1395ff;
+}
+@media (max-width: 767px) {
+  .projects-list-item a {
+    padding: 0.5em;
+  }
+}

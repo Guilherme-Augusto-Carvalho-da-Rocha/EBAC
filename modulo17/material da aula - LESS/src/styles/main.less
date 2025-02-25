@@ -1,0 +1,128 @@
+@import 'colors.less';
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.marginBotton8px{
+    margin-bottom: 0.5em;
+}
+
+.btn-link{
+    width: 100%;
+    padding: 1em;
+    background-color: #colors[corBotoes];
+    color: #colors[corTexto];
+    text-decoration: none;
+    border-radius: 1.8em;
+    transition: all ease .3s;
+    border: 0.15em solid #colors[corBotoes];
+        &:hover{
+            background-color: transparent;
+            color: #colors[corBotoes];
+        }
+        @media @breakpointMobile{
+            padding: 0.5em;
+        }
+}
+
+body{
+    background-color: #colors[corDeFundo];
+    color: #colors[corTexto];
+    
+}
+
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @breakpointMobile{
+        max-width: 70vw;
+    }
+    @media @breakpointTablet{
+        max-width: 80vw;
+    }
+}
+
+header{
+    padding: 1.5em;
+    .profile-picture{
+        display: block;
+        margin: 0 auto 1.5em;
+        border-radius: 50%;
+        max-width: 12.5vw;
+        @media @breakpointMobile{
+            max-width: 35vw;
+        }
+        @media @breakpointTablet{
+            max-width: 40vw;
+        }
+    }
+}
+
+nav{
+    margin-top: 2em;
+    h3{
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
+
+.profile-bio{
+    text-align: center;
+    &-name{
+        font-size: 3em;
+        .marginBotton8px();
+    }
+    &-subtitle{
+        font-size: 2em;
+        .marginBotton8px();
+    }
+    &-description{
+        font-size: 1em;
+        opacity: 0.7;
+    }
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    li{
+        list-style: none;
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .btn-link();
+            img{
+                margin-right: 1em;
+            }
+            
+        }
+    }
+    @media @breakpointMobile{
+        display: block;
+        a{
+            width: 100%;
+            margin-top: 0.5em;
+        }
+    }
+}
+
+.projects-list{
+    &-item{
+        text-align: center;
+        list-style: none;
+        a{
+            display: block;
+            .btn-link();
+            margin-top: 0.5em;
+        }
+    }
+}
