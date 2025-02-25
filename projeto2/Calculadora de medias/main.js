@@ -3,14 +3,18 @@ const notaAtv = document.getElementById('notaAtv');
 const form = document.getElementById('form');
 const tbody = document.querySelector('tbody');
 const tfoot = document.querySelector('tfoot');
-const notaMinima = parseFloat(prompt('digite a média minima nescessária para a aprovação:'));
+let notaMinima = parseFloat(prompt('digite a média minima nescessária para a aprovação:'));
+
+while(isNaN(notaMinima)){
+    notaMinima = parseFloat(prompt('média inválida, digite novamente:'));
+    console.log(notaMinima);
+}
 
 const imgAprovado = '<img src="./style/images/aprovado.png" alt="emoji festejando">'
 const imgReprovado = '<img src="./style/images/reprovado.png" alt="emoji triste">'
 
 let notas = [];
 let atividades = [];
-
 
 
 function AdicionarAtividade(){
