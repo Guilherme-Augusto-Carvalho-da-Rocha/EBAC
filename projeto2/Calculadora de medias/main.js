@@ -6,7 +6,7 @@ const tfoot = document.querySelector('tfoot');
 let notaMinima = parseFloat(prompt('digite a média minima nescessária para a aprovação:'));
 
 while(isNaN(notaMinima)){
-    notaMinima = parseFloat(prompt('média inválida, digite novamente:'));
+    notaMinima = parseFloat(prompt('digite uma média minima VÁLIDA (sendo um número) nescessária para a aprovação:'));
     console.log(notaMinima);
 }
 
