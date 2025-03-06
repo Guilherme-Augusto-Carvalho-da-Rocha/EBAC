@@ -1,0 +1,1 @@
+at this module I learned good manners of using CSS as well as BEM and SMACSS methodologies.

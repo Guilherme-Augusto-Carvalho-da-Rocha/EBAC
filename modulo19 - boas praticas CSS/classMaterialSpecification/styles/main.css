@@ -1,0 +1,28 @@
+/* with the !important you can force the higher specification but its a bad practice cause its bruteforcing */
+/* button{
+    background-color: blue !important;
+} */
+
+/* higher specification */
+/* 0 1 0 */
+.btnSucesso{
+    background-color: green;
+}
+
+/* lower specification */
+/* 0 0 1 */
+button{
+    background-color: blue;
+}
+
+/* 010 > 001 */
+
+/* higherly specified than .btnSucesso alone */
+/* 0 1 1 */
+button.btnSucesso{
+    background-color: red;
+}
+
+/* 011 > 010 */
+
+/* https://specificity.keegan.st */
