@@ -11,5 +11,8 @@
   "description": "",
   "devDependencies": {
     "sass": "^1.85.1"
+  },
+  "dependencies": {
+    "--yes": "file:"
   }
 }
