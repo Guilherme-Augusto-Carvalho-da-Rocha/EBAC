@@ -1,0 +1,22 @@
+.available-devices{
+    text-align: center;
+    padding: 5.6vw;
+
+    &__list{
+        display: flex;
+        margin-top: 24px;
+        gap: 24px;
+
+        &__item{
+
+            img{
+                max-width: 100%;
+            }
+
+            h3{
+                margin-top: 20px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

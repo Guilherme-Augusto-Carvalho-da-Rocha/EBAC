@@ -2,6 +2,8 @@
 @use 'variaveis';
 @use 'shows';
 @use 'plans';
+@use 'available-devices';
+
 
 @mixin text($fontSize: 16px){
     font-size: $fontSize;
@@ -35,6 +37,9 @@
 
 body{
     background-color: variaveis.$corDeFundo;
+    li{
+        list-style: none;
+    }
 }
 
 .text{
@@ -78,5 +83,44 @@ body{
 
     &:hover{
         cursor: pointer;
+    }
+}
+
+.image-text-section{
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    &__text{
+        padding: 0 2vw;
+
+        h2{
+            margin-bottom: 24px;
+        }
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    &--image-as-background{
+        display: block;
+        position: relative;
+
+        img{
+            width: 100%;
+        }
+
+        .image-text-section__text{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: calc(50% - 5.6vw);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 }
