@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded',function(){
     ChangeTabs();
+    ToggleAccordion();
 });
 
 function HideAllTabs(){
@@ -29,6 +30,19 @@ function ChangeTabs(){
             tab.classList.add('shows__list--is-active');
             HideButtonBorder();
             botao.target.classList.add('shows__tabs__button--is-active');
+        });
+    }
+}
+
+function ToggleAccordion(){
+    const questions = document.querySelectorAll('[data-faq-question]');
+    const cssClass = 'FAQ__questions__item--is-open';
+
+    for(let i = 0; i < questions.length; i++){
+        questions[i].addEventListener('click', function(question){
+            const parentNode = question.currentTarget.parentNode;
+            parentNode.classList.toggle(cssClass);
+            console.log(question.target)
         });
     }
 }

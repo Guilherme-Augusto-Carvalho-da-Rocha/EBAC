@@ -8,7 +8,10 @@
         gap: 24px;
 
         &__item{
-
+            &__devices{
+                list-style: none;
+            }
+            
             img{
                 max-width: 100%;
             }
