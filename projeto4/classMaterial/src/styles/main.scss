@@ -4,7 +4,7 @@
 @use 'plans';
 @use 'available-devices';
 @use 'FAQ';
-
+@use 'footer';
 
 @mixin text($fontSize: 16px){
     font-size: $fontSize;
