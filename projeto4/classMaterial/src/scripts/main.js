@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded',function(){
     ChangeTabs();
     ToggleAccordion();
+    ToggleHeader();
 });
 
 function HideAllTabs(){
@@ -45,4 +46,21 @@ function ToggleAccordion(){
             console.log(question.target)
         });
     }
+}
+
+function ToggleHeader(){
+    const heroSection = document.querySelector('.hero');
+    const heroHeight = heroSection.clientHeight;
+    const headerSection = document.querySelector('.header');
+
+    window.addEventListener('scroll',function(){
+        const actualHeight = window.scrollY;
+        if( actualHeight < heroHeight){
+            headerSection.classList.add('header--is-hidden');
+            console.log('0');
+        } else{
+            headerSection.classList.remove('header--is-hidden');
+            console.log('1');
+        }
+    })
 }
