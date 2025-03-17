@@ -9,10 +9,18 @@
         display: flex;
         justify-content: space-around;
 
+        @media (max-width: 768px){
+            display: block;
+        }
+
         &__item{
             text-align: center;
             padding: 60px 44px 44px;
             max-width: 380px;
+
+            @media (max-width: 768px) {
+                margin: 0 auto;
+            }
 
             &--is-popular{
                 background-image: url(../images/fundo_combo_plus.png);

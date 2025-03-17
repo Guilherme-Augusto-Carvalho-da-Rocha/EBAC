@@ -57,10 +57,8 @@ function ToggleHeader(){
         const actualHeight = window.scrollY;
         if( actualHeight < heroHeight){
             headerSection.classList.add('header--is-hidden');
-            console.log('0');
         } else{
             headerSection.classList.remove('header--is-hidden');
-            console.log('1');
         }
     })
 }

@@ -21,7 +21,11 @@
                 display: block;
                 cursor: pointer;
                 position: relative;
-                
+                @media (max-width: 768px) {
+                    h3{
+                        padding-right: 32px;
+                    }
+                }
 
                 &::after{
                     content: '+';
