@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/styles/main.min.css">
+    <title>Coraline landing page (unoficial)</title>
+</head>
+<body>
+    <main>
+        <header class="header header--is-hidden">
+            <div class="header__top-container">
+                <img class="header__branding" src="./images/coraline-header.png" alt="">
+                <button class="button button--hamburger">
+                    <img src="./images/hamburger-menu-icon.svg" alt="Menu">
+                </button>
+            </div>
+            <nav class="header__nav header__nav--is-hidden">
+                <ul class="header__nav__list">
+                    <li class="header__nav__list__item">
+                        <button data-button-target="hero" class="button button--nav button--nav--is-active">Comprar agora</button>
+                    </li>
+                    <li class="header__nav__list__item">
+                        <button data-button-target="moreInfo" class="button button--nav">Mais informações</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section data-section="hero" class="hero">
+            <div class="hero__content">
+                <h1 class="title--big">Coraline</h1>
+                <p class="text--big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, at. Laboriosam, asperiores soluta officiis ab nihil culpa! Aperiam molestias adipisci error vel libero facilis doloremque, iusto, est voluptatem, corrupti at.</p>
+                <div class="hero__content__ways-to-watch">
+                    <p class="text">Para assistir ao filme, você pode:</p>
+                    <ul class="hero__content__ways-to-watch__list">
+                        <li class="hero__content__ways-to-watch__list__item">
+                            <a class="button" href="https://www.primevideo.com/dp/amzn1.dv.gti.07a3da5f-58ac-4758-9e12-e48b66cdf49b?autoplay=0&ref_=atv_cf_strg_wb">Assinar Prime Video</a>
+                        </li>
+                        <li class="hero__content__ways-to-watch__list__item">
+                            <a class="button" href="https://www.youtube.com/watch?v=bsgxE1TjgiM">Comprar no Youtube</a>
+                        </li>
+                        <li class="hero__content__ways-to-watch__list__item">
+                            <a class="button" href="https://tv.apple.com/br/movie/coraline-e-o-mundo-secreto-coraline-dublado/umc.cmc.17hvodr5b8uuq3z45cs23akbd?action=play">Comprar no Apple TV</a>
+                        </li>
+                        <li class="hero__content__ways-to-watch__list__item">
+                            <a class="button" href="https://play.google.com/store/movies/details?id=MUHkN8TFk4I.P&pli=1">Comprar no Google Play</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section data-section="moreInfo" class="more-info">
+            <h2 class="title">Mais informações:</h2>
+
+            <div class="more-info__trailer">
+                <h3 class="title--small">Trailer do filme:</h3>
+                <iframe class="more-info__trailer__video" src="https://www.youtube.com/embed/m9bOpeuvNwY" frameboard="0"></iframe>
+            </div>
+
+            <div class="more-info__credits">
+                <h3 class="title--small">Créditos:</h3>
+                <ul class="more-info__credits__nav">
+                    <li class="more-info__credits__nav__item">
+                        <button data-button-target="elenco" class="button button--nav button--nav--is-active">Elenco</button>
+                    </li>
+                    <li class="more-info__credits__nav__item">
+                        <button data-button-target="diretor" class="button button--nav">Direção e Roteiro</button>
+                    </li>
+                    <li class="more-info__credits__nav__item">
+                        <button data-button-target="producer" class="button button--nav">Produção</button>
+                    </li>
+                </ul>
+                <ul class="more-info__credits__tabs">
+                    <li data-tab-credits="elenco" class="more-info__credits__tabs__tab more-info__credits__tabs__tab--is-active">
+                        <ul class="more-info__credits__tabs__tab__atores">
+                            <li class="more-info__credits__tabs__tab__atores__item">
+                                <img src="./images/elenco/dakota_fanning.jpeg" alt="Dakota Fanning">
+                                <p class="text--small">Dakota Fanning como Coraline</p>
+                            </li>
+                            <li class="more-info__credits__tabs__tab__atores__item">
+                                <img src="./images/elenco/teri_hatcher.jpeg" alt="Teri Hatcher">
+                                <p class="text--small">Teri Hatcher como Mel Jones (mãe de Coraline) e Outra Mãe</p>
+                            </li>
+                            <li class="more-info__credits__tabs__tab__atores__item">
+                                <img src="./images/elenco/Jenifer-Saunders.jpeg" alt="Jenifer Saunders">
+                                <p class="text--small">Jenifer Saunders como Senhorita Spink</p>
+                            </li>
+                            <li class="more-info__credits__tabs__tab__atores__item">
+                                <img src="./images/elenco/ian-mcshane.jpeg" alt="ian mcshane">
+                                <p class="text--small">Ian McShane como Senhor Bobinsky</p>
+                            </li>
+                            <li class="more-info__credits__tabs__tab__atores__item">
+                                <img src="./images/elenco/dawn-french.jpeg" alt="dawn french">
+                                <p class="text--small">Dawn French como Senhorita Forcible</p>
+                            </li>
+                            <li class="more-info__credits__tabs__tab__atores__item">
+                                <img src="./images/elenco/keith-david.jpeg" alt="Keith David">
+                                <p class="text--small">Keith David como Gato</p>
+                            </li>
+                            <li class="more-info__credits__tabs__tab__atores__item">
+                                <img src="./images/elenco/john-linell.jpeg" alt="john linell">
+                                <p class="text--small">Jonh Linell como Outro Pai (cantado)</p>
+                            </li>
+                            <li class="more-info__credits__tabs__tab__atores__item">
+                                <img src="./images/elenco/robert-bailey-jr.jpeg" alt="Robert Bailey Junior">
+                                <p class="text--small">Robert Bailey Jr. como Wyborne "Wybie" Lovat</p>
+                            </li>
+                            <li class="more-info__credits__tabs__tab__atores__item">
+                                <img src="./images/elenco/john-hodgman.jpeg" alt="john hodgman">
+                                <p class="text--small">John Hodgman como Charlie Jones (pai de Coraline) e Outro Pai</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-tab-credits="diretor" class="more-info__credits__tabs__tab ">
+                        <div class="more-info__credits__tabs__tab__diretor-e-roteirista">
+                            <img src="./images/henry-sellick.jpg" alt="Henry Sellick">
+                            <p class="text--big">Diretor, Roteirista, Compositor e Produtor da tão aclamada obra</p>
+                        </div>
+                    </li>
+                    <li data-tab-credits="producer" class="more-info__credits__tabs__tab ">
+                        <div class="more-info__credits__tabs__tab__producer">
+                            <img src="./images/Laika-Logo.jpg" alt="Logo da Laika">
+                            <p class="text--big">Laika Entertainment, LLC. é um estúdio norte-americano de animação stop-motion,especializado em longas-metragens, conteúdo comercial multimídia, videoclipes e filmes de curta metragem. Ele é mais conhecido por seus longas-metragens stop-motion, Coraline, ParaNorman, The Boxtrolls e Kubo and the Two Strings.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="text--small">Criado por <a class="footer__link" href="https://personal-site-ten-dusky.vercel.app">Guilherme Augusto</a> para fins de estudo.</p>
+        <p class="text--small">Created by <a class="footer__link" href="https://personal-site-ten-dusky.vercel.app">Guilherme Augusto</a> for study purposes.</p>
+        <p class="text--small">Todos os direitos da obra Coraline reservados à Laika Entertainment, LLC.</p>
+    </footer>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

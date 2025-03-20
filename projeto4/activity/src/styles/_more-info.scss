@@ -1,0 +1,105 @@
+@use 'variaveis';
+
+@mixin listaCreditos(){
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.more-info{
+    padding: 5.6vw;
+    min-height: 80vh;
+    text-align: center;
+
+    &__trailer{
+        margin-top: 80px;
+
+        &__video{
+            width: 40vw;
+            height: 21.5vw;
+            margin-top: 40px;
+            border: none;
+            box-shadow: 0px 0px 30px 10px variaveis.$buttonBGCollor;
+            
+            @media (max-width: 769px) {
+                width: 90vw;
+                height: 50.625vw;
+            }
+        }
+    }
+
+    &__credits{
+        margin-top: 80px;
+
+        &__nav{
+            display: flex;
+            justify-content: center;
+            gap: 2vw;
+        }
+        
+        &__tabs{
+            
+            
+            &__tab{
+                display: none;
+                margin-top: 40px;
+                height: 100%;
+                
+
+                &--is-active{
+                    display: block;
+                }
+                
+                p{
+                    margin-top: 32px;
+                }
+                
+                &__atores{
+                    @include listaCreditos();
+                    
+                    &__item{
+                        width: calc(25% - 2vw);
+                        
+                        @media (max-width: 769px){
+                            width: calc(50% - 2vw);
+                        }
+
+                        img{
+                            margin-bottom: 16px;
+                            border-radius: 50%;
+                            box-shadow: 0px 0px 15px 5px variaveis.$buttonBGCollor
+                        }
+
+                        p{
+                            margin-top: 12px;
+                        }
+                    }
+                }
+                &__diretor-e-roteirista{
+                    margin: 0 auto;
+                    max-width: 25vw;
+
+                    @media (max-width:769px){
+                        max-width: 80vw;
+                    }
+
+                    img{
+                        width: 100%;
+                        box-shadow: 0px 0px 30px 10px variaveis.$buttonBGCollor
+                    }
+                }
+
+                &__producer{
+                    margin: 0 auto;
+                    max-width: 960px;
+                    img{
+                        width: 100%;
+                        box-shadow: 0px 0px 30px 10px variaveis.$buttonBGCollor
+                    }
+                }
+            }
+        }
+    }
+
+}
