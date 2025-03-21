@@ -3,8 +3,8 @@ const sass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
-const htmlmin = require('gulp-htmlmin');
 const terser = require('gulp-terser');
+const replace = require('gulp-replace');
 
 function compressJS(){
     return gulp.src('./src/scripts/*.js')
@@ -12,10 +12,10 @@ function compressJS(){
         .pipe(gulp.dest('./dist/scripts'));
 }
 
-function htmlCompress(){
-    return gulp.src('./src/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./dist'));
+function replaceHTML(){
+    return gulp.src('./src/*html')
+        .pipe(replace('../dist', '.'))
+        .pipe(gulp.dest('./dist'));
 }
 
 function styles() {
@@ -32,7 +32,7 @@ function images(){
     .pipe(gulp.dest('./dist/images'));
 }
 
-exports.default = gulp.parallel(styles, images, compressJS, htmlCompress);
+exports.default = gulp.parallel(styles, images, compressJS, replaceHTML);
 exports.watch = function(){
     gulp.watch('./src/styles/*.scss',gulp.parallel(styles));
 }
