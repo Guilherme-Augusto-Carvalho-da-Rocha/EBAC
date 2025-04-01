@@ -31,9 +31,6 @@ function Carro(modelo, fabricante, anoModelo, anoFabricacao){
 const carroDoJoao2 = new Carro("Fiesta", "Ford", 2020, 2019);
 const carroDaMaria2 = new Carro("Ka", "Ford", 2021, 2020);
 
-console.log(carroDaMaria2);
-console.log(carroDoJoao2);
-
 const nome = "Guilherme";
 const idade = 18;
 const maiorDeIdade = true;
@@ -46,13 +43,32 @@ const pessoa = {
     conhecimentos: conhecimentos
 }
 
-console.log(typeof nome);
-console.log(typeof idade);
-console.log(typeof maiorDeIdade);
-console.log(typeof conhecimentos);
-console.log(typeof pessoa);
-console.log(typeof carroDaMaria2);
-console.log(typeof carroDoJoao2);
+console.log(pessoa.nome);
 
-console.log(carroDaMaria2 instanceof Carro);
-console.log(conhecimentos instanceof Array);
+Object.freeze(pessoa);
+//por conta do freeze, ele não muda
+pessoa.nome = 'joao';
+
+
+function ExibeAtributo(nomeAtributo){
+    console.log(pessoa[`${nomeAtributo}`]);
+}
+
+
+pessoa["sobrenome"] = undefined;
+
+if (pessoa.sobrenome){
+    console.log("a pessoa tem sobrenome");
+}
+
+if('sobrenome' in pessoa){
+    console.log('a pessoa tem sobrenome indefinido')
+}
+
+console.log(pessoa["nome"]);
+ExibeAtributo("nome");
+
+//keys para o nome dos atributos e values para o valor dos atributos
+console.log(Object.keys(pessoa))
+console.log(Object.values(pessoa))
+
