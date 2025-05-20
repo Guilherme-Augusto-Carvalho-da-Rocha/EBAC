@@ -31,3 +31,8 @@ dadosDaAPI = 'pode tudo';
 dadosDaAPI = true;
 dadosDaAPI = [];
 dadosDaAPI = [1,2,3];
+
+//ele ja deixa tipado na hora que voce declara.
+let curso = 'fullstack python';
+//NAO PODE
+//curso = 10
