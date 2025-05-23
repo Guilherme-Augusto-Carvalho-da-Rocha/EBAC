@@ -101,7 +101,7 @@ body{
 
     &--hamburger{
         display: none;
-        @media (max-width:769px){
+        @media (max-width:1023px){
             display: flex;
             width: 25vw;
                 img{

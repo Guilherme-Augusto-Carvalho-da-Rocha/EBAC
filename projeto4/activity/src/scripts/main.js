@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     console.log('se for dar resize para ver a responsividade, favor dar refresh na pagina pra manter a UX');
     console.log('tem um bug caso voce faca resize da width da tela que so Deus sabe o pq');
-    console.log('se souber resolver, favor contactar o meu e-mail, ele esta no meu portfolio la no final da pagina');
+    console.log('se souber resolver, favor contactar o meu e-mail, ele esta no meu portfolio la no link do fim da pagina');
 })
 
 function hideButtonBorder(buttons){

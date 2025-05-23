@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     
-    @media(max-width:769px){
+    @media(max-width:1023px){
         padding: 5.6vw;
         padding-bottom: 0;
         display: block;
@@ -27,26 +27,26 @@
     &__branding{
         max-width: 160px;
 
-        @media (max-width:769px){
+        @media (max-width:1023px){
             max-width: 30vw;
         }
     }
 
     &__nav{
-        @media(max-width:769px){
+        @media(max-width:1023px){
             display: block;
         }
         &__list{
             display: flex;
             gap: 24px;
-            @media(max-width:769px){
+            @media(max-width:1023px){
                 display: block;
                 
             }
         }
 
         &--is-hidden{
-            @media (max-width:769px){
+            @media (max-width:1023px){
                 opacity: 0;
                 visibility: hidden;
                 display: none;
@@ -62,7 +62,7 @@
         display: flex;
         justify-content: right;
 
-        @media (max-width:769px){
+        @media (max-width:1023px){
             display: block;
         }
 
