@@ -8,3 +8,4 @@ const props = defineProps(['estado', 'getOperacaoPorExtenso'])
         <span class="fs-1">{{ estado.resultado }}</span>
     </div>
 </template>
+<!-- Assinado por Guilherme Augusto -->

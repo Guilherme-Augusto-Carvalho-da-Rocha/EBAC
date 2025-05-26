@@ -6,15 +6,15 @@ const props = defineProps(['estado', 'mudaOperacao', 'changeResultado'])
     <form>
       <div class="row justify-content-center">
         <div class="col-2 text-center">
-          <label v-if="props.estado.operacao === '+'" for="numero1">Sumando 1</label>
+          <label v-if="props.estado.operacao === '+'" for="numero1">Sumando 1</label> 
           <label v-if="props.estado.operacao === '-'" for="numero1">Minuendo</label>
           <label v-if="props.estado.operacao === 'X'" for="numero1">Fator 1</label>
           <label v-if="props.estado.operacao === '/'" for="numero1">Dividendo</label>
-          <input @keyup="evento => props.changeResultado(evento, 1)" type="number" class="form-control" id="numero1">
+          <input @keyup="evento => props.changeResultado(evento, 1)" type="number" class="form-control" id="numero1"> 
         </div>
         <div class="col-1 text-center">
           <label for="operacao">Operacao</label>
-          <select @change="evento => {props.mudaOperacao(evento); props.changeResultado(evento, 0)}" class="form-control text-center" id="operacao">
+          <select @change="evento => {props.mudaOperacao(evento); props.changeResultado(evento, 0)}" class="form-control text-center" id="operacao"> <!-- Assinado por Guilherme Augusto -->
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="X">X</option>
@@ -26,8 +26,9 @@ const props = defineProps(['estado', 'mudaOperacao', 'changeResultado'])
           <label v-if="props.estado.operacao === '-'" for="numero2">Subtraendo</label>
           <label v-if="props.estado.operacao === 'X'" for="numero2">Fator 2</label>
           <label v-if="props.estado.operacao === '/'" for="numero2">Divisor</label>
-          <input @keyup="evento => props.changeResultado(evento, 2)" type="number" class="form-control" id="numero2">
+          <input @keyup="evento => props.changeResultado(evento, 2)" type="number" class="form-control" id="numero2"> <!-- Assinado por Guilherme Augusto -->
         </div>
       </div>
     </form>
 </template>
+<!-- Assinado por Guilherme Augusto -->

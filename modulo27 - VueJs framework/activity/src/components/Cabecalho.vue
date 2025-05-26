@@ -3,3 +3,4 @@
         <h1>Calculadora de Media</h1>
     </header>
 </template>
+<!-- Assinado por Guilherme Augusto -->
