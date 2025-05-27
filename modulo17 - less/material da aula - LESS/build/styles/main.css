@@ -65,6 +65,7 @@ header .profile-picture {
 }
 nav {
   margin-top: 2em;
+  margin-bottom: 2em;
 }
 nav h3 {
   text-align: center;
