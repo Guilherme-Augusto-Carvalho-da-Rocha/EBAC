@@ -1,21 +1,18 @@
-import Perfil from "./components/Perfil"
+import Perfil from "./components/Perfil";
+import Formulario from "./components/Formulario";
+import ReposList from "./components/RepoList";
+import { useState } from "react";
 
 function App() {
-  const nome = 'Guilherme'
-  
-  function getNome(){
-    return nome;
-  }
-
-  const Pessoa = {
-    nome: 'Will'
-  }
-
-  let isItMorning = false;
-
+const [formularioEstaVisivel, setFormularioEstaVisivel] = useState(true);
   return(
     <>
-      <Perfil/>
+      <Perfil nome="Guilherme Augusto" endereco="https://github.com/Guilherme-Augusto-Carvalho-da-Rocha.png"/>
+      <ReposList/>
+      {/* {formularioEstaVisivel &&(
+        <Formulario/>
+      )}
+      <button onClick={() => setFormularioEstaVisivel(!formularioEstaVisivel)} type="button">toggle form</button> */}
     </>
     
   )
