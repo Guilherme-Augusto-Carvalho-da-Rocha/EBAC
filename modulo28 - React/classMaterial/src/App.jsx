@@ -5,10 +5,17 @@ import { useState } from "react";
 
 function App() {
 const [formularioEstaVisivel, setFormularioEstaVisivel] = useState(true);
+const [nomeUsuario, setNomeUsuario] = useState('Guilherme-Augusto-Carvalho-da-Rocha');
   return(
     <>
-      <Perfil nome="Guilherme Augusto" endereco="https://github.com/Guilherme-Augusto-Carvalho-da-Rocha.png"/>
-      <ReposList/>
+    <label htmlFor="nomeUsuario">Digite o nome do usuario que deseja ver:</label><br />
+    <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)} id="nomeUsuario" />
+    {nomeUsuario.length >=2 &&
+      <>
+        <Perfil nomeDoUsuario={nomeUsuario}/>
+        <ReposList nomeUsuario={nomeUsuario}/>
+      </>
+    }
       {/* {formularioEstaVisivel &&(
         <Formulario/>
       )}

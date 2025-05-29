@@ -1,15 +1,15 @@
-import './perfil.css'
+import styles from './Perfil.module.css'
 
 //export default () => {} eh uma possibilidade de componenete sem nome.
 //exporte default function() {} eh outra possibilidade de componente sem nome.
 
-const Perfil = ({endereco, nome}) => {
+const Perfil = ({nomeDoUsuario}) => {
 
     return(
-        <div>
-            <img className="perfil-avatar" src={endereco}/>
-            <h3 className="perfil-titulo">{nome}</h3>
-        </div>
+        <header className={styles.header}>
+            <img className={styles.avatar} src={`https://github.com/${nomeDoUsuario}.png`}/>
+            <h1 className={styles.name}>{nomeDoUsuario}</h1>
+        </header>
     )
 }
 
