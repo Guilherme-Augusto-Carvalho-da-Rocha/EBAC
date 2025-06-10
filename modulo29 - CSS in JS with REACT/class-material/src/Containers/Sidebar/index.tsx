@@ -4,7 +4,15 @@ import Avatar from '../../Components/Avatar'
 import Paragrafo from '../../Components/Paragrath'
 import { BotaoTema, Descricao, SideBarContainer } from './styles'
 
-const Sidebar = () => {
+type Props = {
+  estaUsandoTemaLight: boolean
+  setEstaUsandoTemaLight: (a: boolean) => void
+}
+
+const Sidebar = (props: Props) => {
+  function trocaTema() {
+    props.setEstaUsandoTemaLight(!props.estaUsandoTemaLight)
+  }
   return (
     <aside>
       <SideBarContainer>
@@ -16,7 +24,7 @@ const Sidebar = () => {
         <Descricao tipo="principal" fontSize={12}>
           Desenvolvedor Fullstack
         </Descricao>
-        <BotaoTema>Trocar tema</BotaoTema>
+        <BotaoTema onClick={() => trocaTema()}>Trocar tema</BotaoTema>
       </SideBarContainer>
     </aside>
   )
