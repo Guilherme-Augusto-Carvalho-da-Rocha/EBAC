@@ -13,7 +13,5 @@
     "less": "^4.2.2",
     "less-watch-compiler": "^1.16.3"
   },
-  "dependencies": {
-    "material-da-aula---less": "file:"
-  }
+  "dependencies": {}
 }
